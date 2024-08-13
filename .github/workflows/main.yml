@@ -14,8 +14,8 @@ jobs:
       - name: default deploy
         uses: appleboy/lambda-action@v0.2.0
         with:
-          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: ${{ secrets.AWS_REGION }}
+          aws_access_key_id: ${{ aws.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ aws.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ${{ aws.AWS_REGION }}
           function_name: primeirafuncao
           zip_file: deployment.zip
